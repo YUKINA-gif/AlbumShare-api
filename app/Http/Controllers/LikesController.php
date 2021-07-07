@@ -22,13 +22,13 @@ class LikesController extends Controller
         return response()->json([
             "message" => "Like created successfully",
             "data" => $param
-        ],200);
+        ], 200);
     }
     public function delete(Request $request)
     {
-        DB::table("likes")->where("photo_id",$request->photo_id)->where("user_id",$request->user_id)->delete();
+        DB::table("likes")->where("photo_id", $request->photo_id)->where("user_id", $request->user_id)->delete();
         return response()->json([
             "message" => "Like deleted successfully"
-        ],200);
+        ], 200);
     }
 }

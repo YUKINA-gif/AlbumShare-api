@@ -10,6 +10,6 @@ class LogoutController extends Controller
     {
         return response()->json([
             "auth" => false
-        ],200);
+        ], 200);
     }
 }
